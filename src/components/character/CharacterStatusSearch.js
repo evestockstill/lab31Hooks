@@ -4,7 +4,7 @@ import Characters from './Characters';
 import styles from './CharacterStatusSearch.css';
 // import RadioButtons from '../components/commons/RadioButtons';
 
-const CharacterStatusSearch = ({ selectStatus }) => {
+const CharacterStatusSearch = ({ selectCharacterStatus }) => {
   const [query, setQuery] = useState('');
   const [searchStatusTerm, setSearchStatusTerm] = useState('');
 
@@ -31,7 +31,7 @@ const CharacterStatusSearch = ({ selectStatus }) => {
           <button>Status</button>
         </section>
       </form>
-      <Characters searchStatusTerm={searchStatusTerm} selectStatus={selectStatus} />
+      <Characters searchStatusTerm={searchStatusTerm} selectStatus={selectCharacterStatus} />
     </>
   );
 };

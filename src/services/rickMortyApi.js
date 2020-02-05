@@ -12,7 +12,7 @@ export const getCharacter = () => {
 
 export const getCharactersByStatus = searchStatusTerm => {
   return fetch(
-    `https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/?character/${searchStatusTerm}`,
+    `https://cors-anywhere.herokuapp.com/https://rickandmortyapi.com/api/character/?${searchStatusTerm}`,
     {
       headers: {
         origin: null

@@ -5,13 +5,13 @@ import {
   useCharacters
 } from '../../hooks/characters';
 
-const Characters = ({ searchStatusTerm, selectCharacterStatus }) => {
+const Characters = ({ searchStatusTerm }) => {
   const characters = useCharacters(searchStatusTerm);
 
   const characterStatusElements = characters.map(character => {
     <li
       key={character.name}
-      onClick={() => selectCharacterStatus(character.name)}
+
     >
       <Character {...character} />
     </li>;
@@ -20,6 +20,5 @@ const Characters = ({ searchStatusTerm, selectCharacterStatus }) => {
 };
 Characters.propTypes = {
   searchStatusTerm: PropTypes.func.isRequired,
-  selectCharacterStatus: PropTypes.func.isRequired
 };
 export default Characters;
