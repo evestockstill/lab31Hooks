@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCharacters } from '../services/getCharacters';
+import { getCharacters } from '../services/rickMortyApi';
 import Character from '../components/character/Character';
 import Button from '../components/commons/button/Button';
 
