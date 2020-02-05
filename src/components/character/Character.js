@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import styles from './Character.css';
 
 
-const Character = ({ name, image, type }) => (
+const Character = ({ name, image, status }) => (
   <section className={styles.container}>
     <figure>
       <img src={image} />
-      <figcaption className={styles.name}>{name}status:{type}</figcaption>
+      <figcaption className={styles.name}>{name}status:{status}</figcaption>
     </figure>
   </section>
 
@@ -16,7 +16,7 @@ const Character = ({ name, image, type }) => (
 Character.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired
+  status: PropTypes.string.isRequired
 };
 
 export default Character;

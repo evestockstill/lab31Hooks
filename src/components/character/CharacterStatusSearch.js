@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Characters from './Characters';
-import styles from './CharacterTypeSearch.css';
+import styles from './CharacterStatusSearch.css';
 import RadioButtons from '../components/commons/RadioButtons';
 
-const CharacterTypeSearch = ({ selectType }) => {
+const CharacterStatusSearch = ({ selectStatus }) => {
   const [query, setQuery] = useState('');
-  const [searchTypeTerm, setSearchTypeTerm] = useState('');
+  const [searchStatusTerm, setSearchStatusTerm] = useState('');
 
   const radioButtons = [
     { label: 'Alive', value: 'alive' },
@@ -16,7 +16,7 @@ const CharacterTypeSearch = ({ selectType }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    setSearchTypeTerm(query);
+    setSearchStatusTerm(query);
   };
 
   return (
@@ -25,17 +25,17 @@ const CharacterTypeSearch = ({ selectType }) => {
         <section className={styles.radioButtonsContainer}>
           <RadioButtons
             radioButtons={radioButtons}
-            name='characterType'
+            name='characterStatus'
             onChange={({ target }) => setQuery(target.value)}
           />
           <button>Status</button>
         </section>
       </form>
-      <Characters searchTypeTerm={searchTypeTerm} selectType={selectType} />
+      <Characters searchStatusTerm={searchStatusTerm} selectStatus={selectStatus} />
     </>
   );
 };
-CharacterTypeSearch.propTypes = {
-  selectType: PropTypes.fn.isRequired
+CharacterStatusSearch.propTypes = {
+  selectStatus: PropTypes.fn.isRequired
 };
-export default CharacterTypeSearch;
+export default CharacterStatusSearch;
