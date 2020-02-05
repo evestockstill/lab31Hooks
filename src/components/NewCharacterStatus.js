@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import CharacterStatusSearch from './character/CharacterStatusSearch';
-import Character from './character/Character';
+import Characters from './character/Characters';
 
 const NewCharacterStatus = () => {
-  const [statusSearch, setStatusSearch] = useState('');
+  //STATUS STATE
+  const [status, setStatus] = useState('');
 
   return (
     <>
-      <CharacterStatusSearch selectCharacterStatus={setStatusSearch} />
-      <Character statusSearch={statusSearch} />
+      <CharacterStatusSearch setStatus={setStatus} />
+      <Characters status={status} />
     </>
   );
 };
