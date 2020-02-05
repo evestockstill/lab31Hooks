@@ -3,10 +3,11 @@ import { getCharacter } from '../services/getCharacter';
 import Character from '../components/character/Character';
 import Button from '../components/commons/button/Button';
 
+
 const RickMortyFn = () => {
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
-
+  
   useEffect(() => {
     fetch();
   }, []);
@@ -25,7 +26,10 @@ const RickMortyFn = () => {
   return (
     <>
       <Character image={image} name={name} />
-      <Button text="Who's next?" handleClick={handleClick} />
+      <Button 
+        text="Who's next?"
+        handleClick={handleClick}
+      />
     </>
   );
 };

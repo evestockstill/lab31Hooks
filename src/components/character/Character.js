@@ -6,7 +6,7 @@ const Character = ({ name, image }) => (
   <section className={styles.container}>
     <figure>
       <img src={image} />
-      <figcaption>{name}</figcaption>
+      <figcaption className={styles.name}>{name}</figcaption>
     </figure>
   </section>
 );

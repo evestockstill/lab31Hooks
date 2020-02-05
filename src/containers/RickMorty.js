@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getCharacter } from '../services/getCharacter';
 import Character from '../components/character/Character';
 import Button from '../components/commons/button/Button';
+import styles from '../components/commons/button/Button.css';
 
 export default class RickMorty extends Component {
   state = {
@@ -30,12 +31,11 @@ export default class RickMorty extends Component {
 
   render() {
     const { name, image } = this.state;
-    console.log('charters', name);
 
     return (
       <>
         <Character image={image} name={name} />
-        <Button text="Who's next?" handleClick={this.handleClick} />
+        <Button className={styles.nextBtn}text="Who's next?" handleClick={this.handleClick} />
       </>
     );
   }
