@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Character.css';
 
+
 const Character = ({ name, image }) => (
   <section className={styles.container}>
     <figure>
@@ -9,6 +10,7 @@ const Character = ({ name, image }) => (
       <figcaption className={styles.name}>{name}</figcaption>
     </figure>
   </section>
+
 );
 
 Character.propTypes = {

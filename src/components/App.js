@@ -5,6 +5,7 @@ import Footer from '../components/footer/Footer';
 import RickMortyFn from '../containers/RickMortyFn';
 
 export default function App() {
+  
   return (
     <>
       <Header />

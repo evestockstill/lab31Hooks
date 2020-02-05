@@ -4,6 +4,7 @@ import Character from '../components/character/Character';
 import Button from '../components/commons/button/Button';
 
 
+
 const RickMortyFn = () => {
   const [name, setName] = useState('');
   const [image, setImage] = useState('');
