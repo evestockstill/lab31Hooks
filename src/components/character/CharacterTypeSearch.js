@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Character from './Character';
+import Characters from './Characters';
 import styles from './CharacterTypeSearch.css';
 import RadioButtons from '../components/commons/RadioButtons';
 
@@ -31,7 +31,7 @@ const CharacterTypeSearch = ({ selectType }) => {
           <button>Status</button>
         </section>
       </form>
-      <Character searchTypeTerm={searchTypeTerm} selectType={selectType} />
+      <Characters searchTypeTerm={searchTypeTerm} selectType={selectType} />
     </>
   );
 };
