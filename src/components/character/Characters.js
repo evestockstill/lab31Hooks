@@ -20,3 +20,4 @@ Characters.propTypes = {
   searchStatusTerm: PropTypes.func.isRequired,
   selectCharacterStatus: PropTypes.func.isRequired
 };
+export default Characters;

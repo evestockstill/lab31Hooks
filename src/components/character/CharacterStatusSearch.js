@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Characters from './Characters';
 import styles from './CharacterStatusSearch.css';
-import RadioButtons from '../components/commons/RadioButtons';
+// import RadioButtons from '../components/commons/RadioButtons';
 
 const CharacterStatusSearch = ({ selectStatus }) => {
   const [query, setQuery] = useState('');
@@ -23,11 +23,11 @@ const CharacterStatusSearch = ({ selectStatus }) => {
     <>
       <form onSubmit={handleSubmit}>
         <section className={styles.radioButtonsContainer}>
-          <RadioButtons
+          {/* <RadioButtons
             radioButtons={radioButtons}
             name='characterStatus'
             onChange={({ target }) => setQuery(target.value)}
-          />
+          /> */}
           <button>Status</button>
         </section>
       </form>
@@ -35,7 +35,7 @@ const CharacterStatusSearch = ({ selectStatus }) => {
     </>
   );
 };
-CharacterStatusSearch.propTypes = {
-  selectStatus: PropTypes.fn.isRequired
-};
+// CharacterStatusSearch.propTypes = {
+//   selectStatus: PropTypes.fn.isRequired
+// };
 export default CharacterStatusSearch;
