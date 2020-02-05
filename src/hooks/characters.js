@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
-import { getCharacters } from '../services/rickMortyApi';
+import { getCharacters, getCharactersByStatus } from '../services/rickMortyApi';
 
 export const useCharacters = searchStatusTerm => {
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState({
+    image: '',
+    name: '',
+    status: ''
+  });
 
   useEffect(() => {
     if(!searchStatusTerm) return;
@@ -12,4 +16,12 @@ export const useCharacters = searchStatusTerm => {
   }, [searchStatusTerm]);
 
   return characters;
+};
+export const useGetCharactersByStatus = status => {
+  const [characterStatus, setCharacterStatus] = useState({});
+  useEffect(() => {
+    getCharactersByStatus(status)
+      .then(characterStatus => setCharacterStatus(characterStatus));
+  }, [status]);
+  return characterStatus;
 };

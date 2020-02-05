@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Character from './Character';
-import { useCharacters } from '../../hooks/characters';
+import {
+  useCharacters
+} from '../../hooks/characters';
 
 const Characters = ({ searchStatusTerm, selectCharacterStatus }) => {
   const characters = useCharacters(searchStatusTerm);
