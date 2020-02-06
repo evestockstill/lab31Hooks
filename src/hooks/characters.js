@@ -1,30 +1,30 @@
 import { useState, useEffect } from 'react';
 import { getCharacters, getCharactersByStatus } from '../services/rickMortyApi';
 
-export const useCharacters = status => {
+export const useCharacters = () => {
 
-  const [characters, setCharacters] = useState([]);
+  const [characters, setCharacters] = useState({
+    image: '',
+    name: '',
+    status: ''
+  });
+  
+  const [val, setVal] = useState('');
 
   useEffect(() => {
-    if(!status) {
-      console.log('in if');
-      getCharacters().then(setCharacters);
-    } else {
-      console.log('in else', status);
-      getCharactersByStatus(status).then(setCharacters);
-    }
-  }, [status]);
-
-
-  return characters;
+    handleCharacterChange();
+  }, []);
+    
+  const handleCharacterChange = () => {
+    getCharactersByStatus(val)
+      .then(setCharacters(characters));
+  };
+  const handleValChange = (val) => {
+    setVal(val);
+    
+  };
+  return { characters, handleValChange, handleCharacterChange, val };
 };
 
-export const useGetCharactersByStatus = status => {
-  const [characterStatus, setCharacterStatus] = useState({});
-  useEffect(() => {
-    getCharactersByStatus(status).then(characterStatus =>
-      setCharacterStatus(characterStatus)
-    );
-  }, [status]);
-  return characterStatus;
-};
+
+ 

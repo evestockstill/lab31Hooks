@@ -7,14 +7,15 @@ const Character = ({ name, image, status }) => (
   <section className={styles.container}>
     <figure>
       <img src={image} />
-      <figcaption className={styles.name}>{name}status:{status}</figcaption>
+      <figcaption className={styles.name}>{name}{status}</figcaption>
     </figure>
   </section>
-
 );
+  
+  
 
 Character.propTypes = {
-  // image: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired
 };

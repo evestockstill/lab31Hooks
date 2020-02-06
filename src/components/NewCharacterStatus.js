@@ -3,6 +3,7 @@ import CharacterStatusSearch from './character/CharacterStatusSearch';
 import Characters from './character/Characters';
 
 const NewCharacterStatus = () => {
+  console.log('newCharacterStatus', NewCharacterStatus)
   //STATUS STATE
   const [status, setStatus] = useState('');
 

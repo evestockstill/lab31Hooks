@@ -14,4 +14,7 @@ const Characters = ({ status }) => {
   return <ul>{characterStatusElements}</ul>;
 };
 
+Characters.propType = {
+  status: PropTypes.string.isRequired
+};
 export default Characters;
